@@ -1,0 +1,40 @@
+{
+  "name": "shuorenhua",
+  "version": "0.2.0",
+  "description": "Bridge the latest Codex assistant message, with the preceding user input as context, to external coding agents for Chinese translation.",
+  "author": {
+    "name": "stardust"
+  },
+  "homepage": "https://github.com/StarDuster/codex-plugin-shuorenhua",
+  "repository": "https://github.com/StarDuster/codex-plugin-shuorenhua",
+  "license": "MIT",
+  "keywords": [
+    "chinese",
+    "translation",
+    "session",
+    "srh",
+    "claude-code",
+    "opencode",
+    "omp",
+    "antigravity",
+    "codex"
+  ],
+  "interface": {
+    "displayName": "说人话",
+    "shortDescription": "srh 快速翻译最后一条 Codex 回复",
+    "longDescription": "Submit srh, shuorenhua, or 说人话 at the Codex prompt to run the UserPromptSubmit hook before the main model. The plugin exports only the latest assistant message, uses the preceding user input as context, calls a selected local coding-agent CLI, and returns the Chinese translation as the hook block reason. It can target Claude Code, OpenCode, Oh My Pi, Antigravity, or Codex exec.",
+    "developerName": "stardust",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "srh 用 Claude Code 翻译最后一条 Codex 回复。",
+      "srh 把最后一条 Codex 回复发给 Gemini 翻译成中文。",
+      "说人话 用 opencode/omp 翻译最后一条回复。"
+    ],
+    "brandColor": "#2563EB"
+  }
+}

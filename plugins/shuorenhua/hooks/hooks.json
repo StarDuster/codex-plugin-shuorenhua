@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/session_bridge.py\" capture-hook",
+            "timeout": 240,
+            "statusMessage": "Running srh command when requested"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/session_bridge.py\" capture-hook",
+            "timeout": 10,
+            "statusMessage": "Recording final Codex turn state"
+          }
+        ]
+      }
+    ]
+  }
+}
